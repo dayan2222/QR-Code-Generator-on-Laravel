@@ -15,9 +15,11 @@ use App\Http\Controllers\GenerateQrCodeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-// Route::get('simple-qr-code', [GenerateQrCodeController::class, 'simpleQrCode']);
+
 Route::get('simple-qr-code', [GenerateQrCodeController::class, 'simpleQrCode']);
 Route::get('color-qr-code', [GenerateQrCodeController::class, 'colorQrCode']);
 Route::get('image-qr-code', [GenerateQrCodeController::class, 'imageQrCode']);
+
+

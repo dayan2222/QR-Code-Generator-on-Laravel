@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class GenerateQrCodeController extends Controller
 {
     //
-    public function simpleQrCode() 
+    public function simpleQrCode(Request $request) 
     {
-     $a = "https://www.google.com/"; 
-     return \QrCode::size(300)->generate('A basic example of QR code!'.$a);
+      $url = $request->url;
+      return \QrCode::size(300)->generate('URL: '.$url);
 
     }    
 
